@@ -12,7 +12,7 @@ const PORT = process.env.PORT || 4000;
 console.log("Attempting to connect to services...");
 
 Promise.all([connectDB(), connectRedis()])
-  .then((results) => {
+  .then(() => {
     console.log(
       "✅✅ MongoDB and Redis connected successfully. Starting server..."
     );
